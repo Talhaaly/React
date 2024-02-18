@@ -22,9 +22,10 @@ function App() {
 
     setPassword(pass)
   }, [length, numAllowed, charAllowed, setPassword])
+
   const copypswdToClipboard = useCallback(() => {
     pswdRef.current?.select();
-    pswdRef.current?.setSelectionRange(0, 30)
+    //  pswdRef.current?.setSelectionRange(0, 10)
     window.navigator.clipboard.writeText(password)
   }, [password])
   useEffect(() => {
